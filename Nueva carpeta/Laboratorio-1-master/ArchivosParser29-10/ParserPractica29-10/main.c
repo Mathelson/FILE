@@ -32,6 +32,7 @@ int main(void){
 
         GetAge(&personas[i]));
         //exit(EXIT_SUCCESS);*/
+
     }
 }
 int parseData(char* fileName,Persona* arrayPersonas, int len){
@@ -42,6 +43,12 @@ int parseData(char* fileName,Persona* arrayPersonas, int len){
     int r,i=0;
     char var1[50],var3[50],var2[50],var4[50];
     pFile = fopen(fileName,"r");
+    /**if ((bin=fopen(ARCH,"rb+"))==NULL){
+      if ((bin=fopen(ARCH,"wb+"))==NULL){
+         printf("No se pudo abrir el archivo");
+         exit(1);
+                    }
+                }*/
 
     if(pFile == NULL){
     return -1;
